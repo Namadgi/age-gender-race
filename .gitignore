@@ -3,3 +3,5 @@
 *.json
 data/
 model_store/
+model_weights/agre.onnx
+model_weights/backbone_state_dict.pth
