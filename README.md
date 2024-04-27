@@ -55,18 +55,19 @@ _imagePrediction = await _imageModel!.getImagePrediction(
 The result is the label. The negative values signify one of the errors. Other values stand for emotion class:
 ```
 {
-   -2: "No face, too small or bad quality",
-   -3: "Found more than ONE face",
-   -4: "Face is not centered",
-    0: "Anger",
-    1: "Disgust",
-    2: "Fear",
-    3: "Happiness",
-    4: "Neutral",
-    5: "Sadness",
-    6: "Surprise"
+   'code': 0,
+   'age': 20,
+   'gender': 0,
+   'race': 2,
 }
 ```
+The value of `code` is one of the following integers `[0, 2, 3, 4]`, where `{0: 'Successful check', 2: 'No face, too small or bad quality', 3: 'Found more than ONE face', 4: 'Face is not centered'}`.
+
+The value of `age` is an integer in the range `[0:100]`. Value of `age` stands for the person's actual age.
+
+The value of `gender` is a binary, where `{0: "Female", 1: "Male"}`.
+
+The value of `race` is an integer, where `{0: "White", 1: "Black", 2: "Asian", 3: "Indian", 4: "Latino / Middle Eastern"}`.
 
 ## Credits
 
